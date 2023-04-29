@@ -38,7 +38,7 @@ class CustomerService(private val customerRepository: CustomerRepository) {
         customerRepository.delete(foundCustomer)
     }
 
-    fun finadByNameLike(name: String): List<Customer> =
+    fun findByNameLike(name: String): List<Customer> =
         customerRepository.findByFirstNameLike(name)
 
     private fun CustomerRequest.toCustomerEntity(): Customer {
